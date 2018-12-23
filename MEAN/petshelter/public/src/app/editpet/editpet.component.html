@@ -1,0 +1,34 @@
+<p>{{error}}</p>
+{{ name.errors | json }}
+{{ name.valid | json }}
+{{ type.errors | json }}
+{{ type.valid | json }}
+{{ description.errors | json }}
+{{ description.valid | json }}
+<div class="container">
+
+  <form (submit) = "onSubmit()" class="postForm">
+    <label>pet name:
+      <input type="text" name="name" required minlength="3" maxlength="100" #name="ngModel" [(ngModel)]="editpet.name"  />
+    </label> <br>
+    <label>pet type:
+      <input type="text" name="type" required minlength="3" maxlength="100" #type="ngModel" [(ngModel)]="editpet.type"  />
+    </label><br>
+    <label>pet description:
+      <input type="text" name="description" required minlength="3" maxlength="100" #description="ngModel" [(ngModel)]="editpet.description"  />
+    </label><br>
+    <p>Skills:</p>
+    <label>skill 1:
+      <input type="text" name="skill1" [(ngModel)]="editpet.skill1"  />
+    </label><br>
+    <label>skill 2:
+      <input type="text" name="skill2" [(ngModel)]="editpet.skill2"  />
+    </label><br>
+    <label>skill 3:
+      <input type="text" name="skill3" [(ngModel)]="editpet.skill3"  />
+    </label><br>
+    <input type="submit" value="edit Pet" />
+  </form>
+  <button [routerLink]="['/pets']">Cancel</button>  <br>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Dishes</title>
+</head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <header class="jumbotron">
+        <h1 class="text-center"><a href="/">Chefs</a> | Dishes</h1>
+        <p class="text-right"><a href="/newdish">Add a Dish</a></p>
+    </header>
+    <h1 class="text-center">Check out our Roster of Dishes</h1>
+    <table>
+        <td>name</td>
+        <td>chef</td>
+        <td>tastiness</td>
+        <td>calories</td>
+        @model Dish
+        @foreach(var x in @ViewBag.AllDishes){
+        <tr>
+            <td>@x.name</td>
+            <td>@x.Chef.firstname </td>
+            <td>@x.tastiness</td>
+            <td>@x.calories</td>
+        </tr>}
+    </table>
+</body>
+
+</html>

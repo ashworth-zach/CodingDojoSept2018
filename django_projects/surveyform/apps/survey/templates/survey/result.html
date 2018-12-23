@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" type='text/css' href="{% static 'survey/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>youve filled out this form {{request.session.timescompleted}} time(s)</h1>
+    <table>
+        <th>first</th>
+        <th>last</th>
+        <th>language</th>
+        <th>location</th>
+        <th>comment</th>
+        <tr>
+            <td>{{request.session.firstname}}</td>
+            <td>{{request.session.lastname}}</td>
+            <td>{{request.session.language}}</td>
+            <td>{{request.session.location}}</td>
+            <td>{{request.session.comment}}</td>
+        </tr>
+    </table>
+</body>
+</html>

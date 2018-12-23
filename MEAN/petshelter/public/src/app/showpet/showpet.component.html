@@ -1,0 +1,14 @@
+<h1 *ngIf='adopted'>THANKS FOR ADOPTING </h1>
+<div *ngIf='!adopted'>
+
+  <h1>Details about {{data.name}}</h1>
+  <hr>
+  
+  <h1>Description: {{data.description}}</h1>
+  <hr>
+  <h1>skills: </h1>
+  <li *ngFor='let x of data.skills'>{{x}}</li>
+  <p>likes: {{data.likes}}</p>
+  <button *ngIf='!liked' (click)='Like()'>Like this pet</button>
+  <button (click)='Delete(data._id)'>adopt this pet</button>
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Ajax Demo</title>
+    <script src="https://ajax.googleapis.com/aj..."></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.co..." integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+<table>
+    <th>firstname</th>
+    <th>lastname</th>
+    <th>email</th>
+    <th>age</th>
+    <th>created_at</th>
+    {%for user in users%}
+    <tr>
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.email_address}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.created_at}}</td>
+    </tr>
+    {%endfor%}
+</table>
+  </body>
+</html>

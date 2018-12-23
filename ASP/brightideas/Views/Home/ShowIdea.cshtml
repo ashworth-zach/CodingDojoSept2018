@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <title>Idea</title>
+</head>
+<body>
+    <div class="header"><p class="rightside text-right"><a href="/Ideas">Bright Ideas</a> <a href="/logout">Logout</a></p></div>
+    <div class="container"> 
+    <p><a href="/user/@ViewBag.User.UserId">@ViewBag.User.firstname</a> says: <span class="box">@ViewBag.Idea.content</span></p>
+    <p><strong>People who liked this post:</strong></p>
+    <table>
+        <th>alias</th>
+        <th>Name</th>
+        @foreach (var like in @ViewBag.Likes){
+        <tr>
+            <td><a href="/user/@like.user.UserId">@like.user.alias</a></td>
+            <td>@like.user.firstname @like.user.lastname</td>
+        </tr>
+}
+    </table>
+</div>
+</body>
+</html>

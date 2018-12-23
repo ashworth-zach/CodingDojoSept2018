@@ -1,0 +1,60 @@
+.box{
+    border: 2px solid black;
+    padding: 4px 4px 4px 4px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 3px solid black;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.rightside{
+    margin-right: 30px;
+}
+.loginbox{
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+    height: 120px;
+    margin-left: 15%;
+}
+.registerbox{
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+    margin-left: 15%;
+
+}
+.idea{
+    display: inline-block;
+
+}
+.ideabox{
+    width: 30%;
+}
+.topleftheader{
+    display: inline-block;
+}
+.toprightheader{
+    float: right;
+}
+.delete {
+    border-radius: 100%;        
+    background: black;
+    color: white;
+    display:inline-block;
+    border: 2px solid black;
+    width: 15px;
+    line-height:20px;
+}

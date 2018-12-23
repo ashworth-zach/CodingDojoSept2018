@@ -1,0 +1,11 @@
+C:\Users\zach\Desktop\Csharp\boxing\boxing\bin\Debug\netcoreapp2.1\boxing.deps.json
+C:\Users\zach\Desktop\Csharp\boxing\boxing\bin\Debug\netcoreapp2.1\boxing.runtimeconfig.json
+C:\Users\zach\Desktop\Csharp\boxing\boxing\bin\Debug\netcoreapp2.1\boxing.runtimeconfig.dev.json
+C:\Users\zach\Desktop\Csharp\boxing\boxing\bin\Debug\netcoreapp2.1\boxing.dll
+C:\Users\zach\Desktop\Csharp\boxing\boxing\bin\Debug\netcoreapp2.1\boxing.pdb
+C:\Users\zach\Desktop\Csharp\boxing\boxing\obj\Debug\netcoreapp2.1\boxing.csprojAssemblyReference.cache
+C:\Users\zach\Desktop\Csharp\boxing\boxing\obj\Debug\netcoreapp2.1\boxing.csproj.CoreCompileInputs.cache
+C:\Users\zach\Desktop\Csharp\boxing\boxing\obj\Debug\netcoreapp2.1\boxing.AssemblyInfoInputs.cache
+C:\Users\zach\Desktop\Csharp\boxing\boxing\obj\Debug\netcoreapp2.1\boxing.AssemblyInfo.cs
+C:\Users\zach\Desktop\Csharp\boxing\boxing\obj\Debug\netcoreapp2.1\boxing.dll
+C:\Users\zach\Desktop\Csharp\boxing\boxing\obj\Debug\netcoreapp2.1\boxing.pdb

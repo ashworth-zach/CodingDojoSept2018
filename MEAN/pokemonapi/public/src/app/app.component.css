@@ -1,0 +1,5 @@
+.comment       { color: #00b3ff; }
+.selector      { color: #57ffe3; }
+.selector .key { color: #98d46f; }
+.key           { color: #ffffff; }
+.value         { color: #3787ff; }

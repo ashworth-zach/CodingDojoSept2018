@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        @model Form
+        <form asp-action="Create" asp-controller="Home" method="post">
+        <span asp-validation-for="firstname"></span>
+        <label asp-for="firstname">firstname</label>
+        <input asp-for="firstname"><br>
+        <span asp-validation-for="lastname"></span>
+        <label asp-for="lastname">lastname</label>
+        <input asp-for="lastname"><br>
+        <span asp-validation-for="email"></span>
+        <label asp-for="email">email</label>
+        <input asp-for="email"><br>
+        <span asp-validation-for="age"></span>
+        <label asp-for="age">age</label>
+        <input asp-for="age"><br>
+        <span asp-validation-for="password"></span>
+        <label asp-for="password">password</label>
+        <input asp-for="password"><br>
+        <input value="Add User" type="submit">    
+    </form>
+</body>
+</html>

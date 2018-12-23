@@ -1,0 +1,24 @@
+ vbnhgfvfunction coinchange(x){
+  var dollars=0,quarters=0,dimes=0,nickels=0,pennies=0;
+  if(x/100 > 1){
+    dollars+=Math.floor(x/100);
+    x-=Math.floor(x/100)*100;
+  }
+  if(x/25 > 1){
+    quarters+=Math.floor(x/25);
+    x-=Math.floor(x/25)*25;
+  }
+  if(x/10 > 1){
+    dimes+=Math.floor(x/10);
+    x-=Math.floor(x/10)*10;
+  }
+  if(x/5 > 1){
+    nickels+=Math.floor(x/5);
+    x-=Math.floor(x/5)*5;
+  }
+  if(x/1 > 1){
+    pennies+=Math.floor(x/1);
+    x-=Math.floor(x/1)*1;
+  }
+  console.log(" dollars : " + dollars + " quarters : " + quarters + " dimes : " + dimes + " nickels : " + nickels + " pennies : " + pennies );
+}

@@ -1,0 +1,25 @@
+* Restarting with stat
+Traceback (most recent call last):
+  File "server.py", line 7, in <module>
+    mysql = connectToMySQL('world')
+  File "C:\Users\zach\Desktop\python_stack\flask_mysql\errors\mysqlconnection.py", line 33, in connectToMySQL
+    return MySQLConnection(db)
+  File "C:\Users\zach\Desktop\python_stack\flask_mysql\errors\mysqlconnection.py", line 11, in __init__
+    cursorclass = pymysql.cursors.DictCursor, autocommit = True)
+  File "C:\Users\zach\AppData\Local\Programs\Python\Python37-32\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\zach\AppData\Local\Programs\Python\Python37-32\lib\site-packages\pymysql\connections.py", line 284, in __init__
+    self.encoding = charset_by_name(self.charset).encoding
+AttributeError: 'NoneType' object has no attribute 'encoding'
+
+solution: changed encoding to proper utf8
+
+e 9, in __init__
+    db = d,
+NameError: name 'd' is not defined
+
+db=db fixed
+
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+made password root

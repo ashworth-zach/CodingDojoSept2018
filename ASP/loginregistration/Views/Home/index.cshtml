@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>index</title>
+</head>
+<body>
+    <h1 class="jumbotron text-center bg-primary">Register Here</h1>
+    <a href="/">HOME</a>
+    @model User
+    <form asp-action="Register" asp-controller="Home" method="post">
+        <span asp-validation-for="firstname"></span>
+    <label asp-for="firstname">firstname</label>
+    <input asp-for="firstname"><br>
+       <span asp-validation-for="lastname"></span>
+    <label asp-for="lastname">lastname</label>
+    <input asp-for="lastname"><br>
+    <span asp-validation-for="email"></span>
+    <label asp-for="email">email</label>
+    <input asp-for="email"><br>
+     <span asp-validation-for="password"></span>
+    <label asp-for="password">password</label>
+    <input asp-for="password"><br>
+     <span asp-validation-for="Confirm"></span>
+    <label asp-for="Confirm">Confirm</label>
+    <input asp-for="Confirm"><br>
+    <input value="Register" type="submit">
+    </form>
+    <a href="/login">already registered? Login here</a>
+</body>
+</html>

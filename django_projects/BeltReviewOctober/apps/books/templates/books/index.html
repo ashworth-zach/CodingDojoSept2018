@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'books/css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>books</title>
+</head>
+<body>
+    <h1 class="jumbotron text-center">welcome {{currentuser.firstname}}</h1>
+    <div class="reviews">
+        <h1>recent book reviews:</h1>
+        {%for review in reviews reversed%}
+        <h4><a href="/books/{{review.book_id}}">title: {{review.book.title}}</a></h4>
+        <a href="/user/{{review.user.id}}">{{review.user.firstname}}</a>
+        <p>rating: <span class="stars" data-stars="{{review.rating}}">xxxxx</span></p>
+        <p>{{review.content}}</p>
+        <p>posted on: -- {{review.created_at}}</p>
+        {%endfor%}
+    </div>
+    <div class="books">
+        <a href="/logout">logout</a>
+        <p></p>
+        <a href="/books/add">add book and review</a>
+        
+        <h3>other books with reviews</h3>
+        <div class="scrollbox">
+
+        {%for book in books%}
+        <a class='booklistitem' href="/books/{{book.id}}">{{book.title}}</a>
+    
+        {%endfor%}
+    </div>
+    </div>
+</body>
+<footer class="jumbotron bg-light">
+    <h3>by zach ashworth oct 18 2018</h3>
+</footer>
+</html>

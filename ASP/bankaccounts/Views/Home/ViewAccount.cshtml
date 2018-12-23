@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+        <header class="jumbotron"><h1>Welcome, @ViewBag.UserInfo.firstname</h1> <p class="text-right">Current Balance: <span class="balance">@ViewBag.UserInfo.Cash</span></p></header>
+    <a href="/logout">logout</a>
+    @model bankaccounts.Models.Transaction
+
+    <form asp-action="Transaction" asp-controller="Home" method="POST">
+            <input type="radio" name="Type" value="Withdraw">Withdraw<br>
+            <input type="radio" name="Type" value="Deposit">Deposit<br>
+            <span asp-validation-for="amount"></span>
+            <label asp-for="amount"></label><input asp-for="amount">
+            <input type="submit" type="Submit">
+        </form>
+        <div>
+                <table>
+                    <thead>
+                        <th>Amount</th>
+                        <th>Date</th>
+                    </thead>
+                    <tbody>
+                        @{
+                            @foreach(var Transaction in ViewBag.UserInfo.Transactions) {
+                            <tr>
+                                <td>@Transaction.amount</td>
+                                <td>@Transaction.created_at.ToString("MMM dd yyyy")</td>
+                            </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<h1>Demo 3 - Ajax Form II</h1>
+<h2>Create a new post</h2>
+<form action='/create' method='post' class='ajax_form' id='create_user_ajax_form'>
+    {% csrf_token %}
+    content <input type='text' name='content'/>
+    <input type='submit' value='Submit' />
+</form>
+<div id='placeholder3' style='margin-top:35px; border:1px solid silver; width:750px; padding:10px;'>
+    {%for post in posts%}
+    <h1 class="post">{{post.content}}</h1>
+    {%endfor%}
+</div>
+<script>
+  $('#create_user_ajax_form').submit(function(e){
+    e.preventDefault()
+    console.log('Sending Ajax request to', $(this).attr('action'))
+    console.log('Submitting the following data', $(this).serialize())
+    $.ajax({
+      url: $(this).attr('action'), /* Where should this go? */
+      method: 'post', /* Which HTTP verb? */
+      data: $(this).serialize(), /* Any data to send along? */
+      success: function(serverResponse) { /* What code should we run when the server responds? */
+        $('#placeholder3').html(serverResponse)
+      }
+    })
+  });
+</script>

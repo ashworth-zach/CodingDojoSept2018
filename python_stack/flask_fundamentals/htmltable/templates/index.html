@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}" />
+</head>
+
+<body>
+    <div class="head">
+        <h1>HELLO WELCOME TO THIS SITE</h1>
+    </div>
+    <table>
+        <th>first name</th>
+        <th>last name</th>
+        <th>full name</th>
+        {% for item in users %}
+        <TR>
+            <TD class="c2">{{item['first_name']}}</TD>
+            <TD class="c3">{{item["last_name"]}}</TD>
+            <TD class="c4"><SPAN>{{item['first_name']+ ' '+ item['last_name']}}</SPAN></TD>
+        </TR>
+        {% endfor %}
+    </table>
+    <div class="head">
+        <h1>this is my table thanks for visiting</h1>
+    </div>
+</body>
+
+</html>

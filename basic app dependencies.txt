@@ -1,0 +1,8 @@
+ 
+npm init -y
+npm install express --save
+npm install express-session --save
+npm install ejs --save
+npm install body-parser --save
+npm install mongoose --save
+ 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MONGOOSI</h1>
+    <%for(var i = 0; i < gooses.length; i++){%>
+    <p> <a href='/mongoose/<%=gooses[i]._id%>'><%=gooses[i].name%></a></p>
+    <p><%=gooses[i].food%></p>
+    <a href="/mongoose/edit/<%=gooses[i]._id%>">edit</a>
+    <a href="/mongoose/delete/<%=gooses[i]._id%>">destroy</a>
+    <%}%>
+    <a href="/mongoose/new">new mongoose</a>
+</body>
+</html>

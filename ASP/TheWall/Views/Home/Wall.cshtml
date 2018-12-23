@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1 class="jumbotron text-center bg-primary">Hello @ViewBag.User.firstname, Welcome to the Wall</h1>
+    <a href="/logout">logout</a>
+    <div class="container">
+        <div class="row">
+            @model WallViewModel
+
+            <!-- // No ".cshtml" -->
+            <div class="col-sm-6">
+                <form action="/Message" method="post">
+
+                    <span asp-validation-for="@Model.message.content"></span>
+                    <label asp-for="@Model.message.content">Message:</label>
+                    <input asp-for="@Model.message.content">
+                    <input value="Submit" type="submit"><br>
+                </form>
+                    @foreach(var user in ViewBag.MessagesComments){
+                        @foreach(var msg in user.messages)
+                        {
+                        <p>@user.firstname - @msg.content    |    @msg.created_at <a href="like/@msg.MessageId">Like</a></p>
+                        <ul>
+                            @foreach(var comment in msg.comments){
+                                <li>@comment.user.firstname - @comment.content    |    @comment.created_at</li>
+                            }
+                        </ul>
+                    <form action="/Comment/@msg.MessageId" method="post">
+                        <span asp-validation-for="@Model.comment.content"></span>
+                        <label asp-for="@Model.comment.content">Comment:</label>
+                        <input asp-for="@Model.comment.content">
+                        <input value="Submit" type="submit">
+
+                    </form>
+                        }
+                    }
+
+            </div>
+            <div class="col-sm-6">
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

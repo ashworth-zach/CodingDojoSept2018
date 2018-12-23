@@ -1,0 +1,29 @@
+<p>{{errors}}</p>
+<div class="container">
+
+  <form (submit) = "onSubmit()" class="postForm">
+    <label>pet name:
+      <input type="text" name="name" [(ngModel)]="newPet.name"  />
+    </label> <br>
+    <label>pet type:
+      <input type="text" name="type" [(ngModel)]="newPet.type"  />
+    </label><br>
+    <label>pet description:
+      <input type="text" name="description" [(ngModel)]="newPet.description"  />
+    </label><br>
+    <p>Skills:</p>
+    <label>skill 1:
+      <input type="text" name="skill1" [(ngModel)]="newPet.skill1"  />
+    </label><br>
+    <label>skill 2:
+      <input type="text" name="skill2" [(ngModel)]="newPet.skill2"  />
+    </label><br>
+    <label>skill 3:
+      <input type="text" name="skill3" [(ngModel)]="newPet.skill3"  />
+    </label><br>
+    <input type="submit" value="Add Pet" />
+  </form>
+  <button [routerLink]="['/pets']">Cancel</button>  <br>
+</div>
+
+<router-outlet></router-outlet>
