@@ -1,0 +1,117 @@
+var sum=0;
+var arr=[];
+var newarr=[];
+var max=0;
+var min=0;
+var avg=0;
+var temp=0;
+var full=false;
+function biggiesize(arr){
+  for (var i =0;i<arr.length;i++){
+    if (arr[i]>0){
+      arr[i]="big";
+    }
+  }
+  return arr;
+}
+function printlowreturnhigh(arr){
+  for(var i=0;i<arr.length;i++){
+    if (arr[i]>max){
+      max=arr[i]
+    }
+    else if(arr[i]<min)
+      {
+        min=arr[i];
+      }
+  }
+  console.log(min);
+  return max;
+}
+function printonereturnanother(arr){
+  console.log(arr[arr.length-2]);
+  for(var i =0;i<arr.length;i++){
+    if (arr[i]%2 != 0){
+      return arr[i];
+    }
+  }
+}
+function doublevision(arr){
+  for (var i =0;i<arr.length;i++){
+    newarr.push(arr[i]*2);
+  }
+  return newarr;
+}
+function countpositives(arr){
+  for(var i =0; i<arr.length; i++){
+    if(arr[i]>0){
+      sum=sum+1;
+    }
+  }
+      arr.pop();
+    arr.push(sum);
+  return arr;
+}
+function evensandodds(arr){
+  for(var i =0; i<arr.length;i++){
+    if (arr[i]%2 == 0 && arr[i+1]%2 == 0 && arr[i+2]%2 == 0){
+      console.log('Even more so!')
+    }
+    else if (arr[i]%2 != 0 && arr[i+1]%2 != 0 && arr[i+2]%2 != 0){
+      console.log('Thats odd!')
+    }
+  }
+}
+function incrementseconds(arr){
+  for (var i=0;i<arr.length;i++){
+    if(i%2 != 0){
+      arr[i]=arr[i]+1;
+    }
+    console.log(arr[i]);
+  }
+  return arr;
+}
+function previouslengths(arr){
+  for(var i =arr.length-1;i>0;i--){
+    arr[i]=arr[i-1].length;
+  }
+  return arr;
+}
+function addseventomost(arr){
+  for(var i =1;i<arr.length;i++){
+    newarr.push(arr[i]+7);
+  }
+  return newarr;
+}
+function reversearray(arr){
+  for (var i = 0;i<arr.length/2;i++){
+    temp = arr[i];
+    arr[i]=arr[arr.length-i-1]
+    arr[arr.length-i-1]=temp;
+  }
+  return arr;
+}
+function outlookneg(arr){
+  for(var i =0;i<arr.length;i++){
+    if(arr[i]<0){
+      newarr.push(arr[i]);
+    }
+    else if(arr[i]>0){
+      temp=arr[i]*2;
+      newarr.push(arr[i]-temp);
+    }
+  }
+  return newarr;
+}
+function alwayshungry(arr){
+  for(var i =0; i<arr.length;i++){
+    if(arr[i]==="food"){
+      console.log('yummy');
+      if(arr[i])
+      full=true;
+    }
+  }
+      if (full===false){
+      console.log('im hungry');
+      return;
+    }
+}

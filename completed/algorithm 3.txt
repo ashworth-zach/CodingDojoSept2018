@@ -1,0 +1,36 @@
+5
+[5,2,2],[5,2,2],[5,8,6],[5,8,6]
+[5,2,2]
+true,undefined
+[coding,coding,coding,coding]
+5,coding,dojo,4
+10
+??
+
+function printAverage(x){
+   sum = 0;
+   avg=0;
+  for(var i =0;i<x.length;i++){
+    sum=sum+x[i];
+  }
+  avg = sum/x.length;
+  return avg;
+   // your code here
+}
+
+function returnOddArray(){
+  for(var i =0;i<256;i++){
+    if (i%2 != 0)
+      {
+        console.log(i);
+      }
+  }
+   // your code here
+}
+function squareValue(x){
+  for (var i =0; i<x.length;i++){
+    x[i]=x[i]*x[i];
+  }
+   // your code here
+   return x;
+}

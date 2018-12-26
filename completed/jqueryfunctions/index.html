@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <title>jquery shit</title>
+</head>
+
+<body>
+    <div class="addclass">
+        <h1 class="addclass">HELLO</h1>
+        <button class="addclass">addclass</button>
+        <p>click any paragraph to slide it up</p>
+        <p>click button to add class red to paragraph</p>
+    </div>
+    <div class="slidetoggle">
+        <button class="sidetoggle">slidetoggle</button>
+        <p>click the button to slidetoggle a hidden image</p>
+    </div>
+    <button class="append">append</button>
+    <button class="fadeout">fadeOut()</button>
+    <p class="appender">click the button to append a new paragraph</p>
+    <img src="./images/start_your_trial.png" alt="" class="appendimage">
+    <button class="fadein">fade back in</button>
+    </div>
+    <div class="demo">
+        <p>demonstrationbox</p>
+    </div>
+    <input id="check1" type="checkbox" checked="checked">
+    <label for="check1">Check me</label>
+    <p class='check'></p>
+    <div class="test">
+        <p>hello //text below changed by var str = $( ".test p:first" ).text();</p>
+        <p>fuggggly boi</p>
+    </div>
+    <select id="single">
+        <option>failure at jquery</option>
+        <option>coding</option>
+    </select>
+
+    <select id="multiple" multiple="multiple">
+        <option selected="selected">lol</option>
+        <option>dojo</option>
+        <option selected="selected">hello bois</option>
+    </select>
+    <p class="multipleother">hey</p>
+</body>
+<script>
+    $(".addclass p").click(function () {
+        $(this).slideUp();
+        $("h1").toggle(); //same as .hide() and .show() but both in one
+    });
+    $("button.addclass").click(function () {
+        $("div").first().removeClass("addclass").addClass("red");
+    });
+    $("button.sidetoggle").click(function () {
+        $(".slidetoggle p").slideToggle("slow"); //cant figure this out come back to it later
+        // $("p").toggle();
+    });
+    $(".fadeout").click(function () {
+        $(".appendimage").fadeOut("slow", function () {
+            //animation complete
+        });
+    });
+    $(".fadein").click(function () {
+        $(".appendimage").fadeIn("slow", function () {
+            //animation complete
+        });
+    });
+    $(".append").click(function () {
+        $(".appender").append("<p>hello</p>");
+    });
+    $(".demo").click(function () {
+        var htmlString = $(".addclass p").html();
+        $(".demo p").text(htmlString);
+    });
+    $("input")
+        .change(function () {
+            var $input = $(this);
+            $("p.check").html(".attr( 'checked' ): <b>" + $input.attr("checked") + "</b><br>" +
+                ".prop( 'checked' ): <b>" + $input.prop("checked") + "</b><br>" +
+                ".is( ':checked' ): <b>" + $input.is(":checked") + "</b>");
+        })
+        .change();
+    var str = $(".test p:first").text();
+    $(".test p:last").html(str);
+
+    function displayVals() {
+        var singleValues = $("#single").val();
+        var multipleValues = $("#multiple").val() || [];
+        // When using jQuery 3:
+        // var multipleValues = $( "#multiple" ).val();
+        $("p.multipleother").html("<b>part of:</b> " + singleValues +
+            " <b>other:</b> " + multipleValues.join(", "));
+    }
+
+    $("select").change(displayVals);
+    displayVals();
+</script>
+
+</html>

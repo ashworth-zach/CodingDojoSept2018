@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 950px;
+    background-color: silver;
+    margin: 0px auto;
+}
+
+#header {
+    min-height: 150px;
+    background-color: green;
+}
+
+#navigation {
+    min-height: 300px;
+    width: 200px;
+    background-color: blue;
+}
+
+#main_content {
+    min-height: 400px;
+    width: 700px;
+    background-color: red;
+    display: block;
+
+}
+
+.subcontents {
+    min-height: 200px;
+    width: 210px;
+    background-color: yellow;
+}
+
+#advertisement {
+    min-height: 120px;
+    width: 660px;
+    background-color: purple;
+}
+
+@media only screen and (max-width: 480px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    #header{
+        width:100%;
+    }
+    #wrapper {
+        width: 400px;
+    }
+
+    #navigation {
+        display: none;
+    }
+
+    #main_content {
+        padding: 25px;
+        width: 100%px;
+    }
+
+    .subcontents {
+        margin: 10px 0px 0 20px;
+        display: block;
+
+    }
+    #advertisement{
+        margin-left: 0;
+    }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media only screen and (min-width: 481px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    #navigation {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    #navigation {
+        display: inline-block;
+    }
+
+    .subcontents {
+        display: inline-block;
+    }
+}

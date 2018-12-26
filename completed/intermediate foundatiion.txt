@@ -1,0 +1,82 @@
+var out = 0;
+function sigma(x){
+  for(var i =0;i<x;i++){
+    out+=i;
+  }
+  return out;
+}
+function factorial(x){
+  var out1=1;
+  for(var i =1;i<x+1;i++){
+    out1=out1*i;
+  }
+  return out1;
+}
+
+function fibonacci(num){
+  var a = 1, b = 0, temp;
+
+  while (num >= 0){
+    temp = a;
+    a = a + b;
+    b = temp;
+    num--;
+  }
+
+  return b;
+}
+function secondtolast(arr){
+  if (arr.length<2){
+    return false;
+  }
+  else{
+    return arr[arr.length-2];
+  }
+}
+function nthtolast(arr,x){
+  if (arr.length<2){
+    return false;
+  }
+  else{
+    return arr[arr.length-x];
+  }
+}
+function secondlargest(arr){
+  var temp=arr[0],temp2=arr[0];
+  if (arr.length<2){
+    return "null";
+  }
+  for(var i =1;i<arr.length;i++){
+    if(arr[i]>temp){
+      temp2=temp;
+      temp=arr[i];
+    }
+    if(arr[i]<temp && temp2<arr[i]){
+      temp2=arr[i];
+      console.log('ghere');
+    }
+
+  }
+  return temp +" "+ temp2;
+}
+function doubletrouble(arr){
+  var pointer =arr.length;
+  arr.length=arr.length*2
+  for(var i =arr.length-1;i>0;i=i-2)
+    {
+      arr[i]=pointer;
+      arr[i-1]=pointer;
+      pointer=pointer-1;
+    }
+  return arr;
+}
+function fibonaccirecursive(num) {
+  if (num <= 1) return 1;
+
+  return fibonaccirecursive(num - 1) + fibonaccirecursive(num - 2);
+}
+
+
+
+
+

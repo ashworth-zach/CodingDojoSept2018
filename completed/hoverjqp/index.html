@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <img class="pic zero" src="./img/cat0.png" alt="">
+    <img class="pic one" src="./img/cat1.png" alt="">
+    <img class="pic two" src="./img/cat2.png" alt="">
+    <img class="pic three" src="./img/cat3.png" alt="">
+    <img class="pic four" src="./img/cat4.png" alt="">
+</body>
+<script>
+    $(document).ready(function () {
+        $('.zero').hover(function () {
+            $(".zero").attr("src","./img/ninja0.png");
+            },
+            function () {
+                $(".zero").attr("src","./img/cat0.png");
+            })
+            $('.one').hover(function () {
+            $(".one").attr("src","./img/ninja1.png");
+            },
+            function () {
+                $(".one").attr("src","./img/cat1.png");
+            })
+            $('.two').hover(function () {
+            $(".two").attr("src","./img/ninja2.png");
+            },
+            function () {
+                $(".two").attr("src","./img/cat2.png");
+            })
+            $('.three').hover(function () {
+            $(".three").attr("src","./img/ninja3.png");
+            },
+            function () {
+                $(".three").attr("src","./img/cat3.png");
+            })
+            $('.four').hover(function () {
+            $(".four").attr("src","./img/ninja4.png");
+            },
+            function () {
+                $(".four").attr("src","./img/cat4.png");
+            })
+    });
+</script>
+
+</html>

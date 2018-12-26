@@ -1,0 +1,68 @@
+select * from friendships
+
+left join users as friend on friend_2_id = friend.id
+
+left join users on friend_1_id = users.id
+
+where friend.first_name = 'Kermit' or users.first_name='Kermit';
+
+select * from friendships
+
+
+left join users as friend on friend_2_id = friend.id
+
+
+left join users on friend_1_id = users.id;
+
+
+
+select users.first_name, users.last_name, count(*) as friends
+
+	from users
+	left join friendships on (users.id = friendships.friend_1_id or users.id = friendships.friend_2_id)
+    
+	group by users.first_name, users.last_name
+ 
+	order by friends desc;
+
+insert into friendships (friend_1_id, friend_2_id, created_at)
+values(6,5, NOW())
+
+insert into friendships (friend_1_id, friend_2_id, created_at)
+values(6,4, NOW())
+
+insert into friendships (friend_1_id, friend_2_id, created_at)
+values(6,2, NOW())
+
+insert into users1(created_at, id, first_name, last_name) 
+values(now(),6,'zach','ashworth');
+
+
+
+select * from friendships
+
+
+left join users as friend on friend_2_id = friend.id
+
+
+left join users on friend_1_id = users.id
+
+
+where friend.first_name = 'Eli' or users1.first_name='Eli'
+
+order by friend.first_name asc;
+
+
+delete from friendships
+
+where friend_1_id = 2 and friend_2_id=5
+
+or friend_2_id = 2 and friend_1_id=5;
+
+SELECT u1.first_name as f1, u1.last_name as l1, u2.first_name as f2, u2.last_name as l2
+
+FROM friendships
+
+inner JOIN users as u1 ON friendships.friend_1_id=u1.id
+
+inner join users as u2 on friendships.friend_2_id =u2.id;

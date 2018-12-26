@@ -1,0 +1,31 @@
+form{
+    width: 40%;
+    height:200px;
+}
+.login{
+    margin-left: 70%;
+    vertical-align: top;
+    margin-top: -200px;
+}
+form:first-of-type{
+    margin-left: 10%;
+}
+.profile{
+    height: 300px;
+}
+input{
+    display: block;
+}
+.error{
+    color: red;
+}
+.jumbotron{
+    margin-bottom: 0;
+}
+nav:first-of-type{
+    margin-top: -35px;
+}
+.send{
+    margin-left: 80%;
+    margin-top: -300px;
+}

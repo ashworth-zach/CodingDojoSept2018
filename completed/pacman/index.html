@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>pacman</title>
+</head>
+
+<body>
+    <div id='world'></div>
+    <div id="pacman"></div>
+    <script>
+        var world = [];
+        var score = 0;
+        var worldDict = {
+            0: 'blank',
+            1: 'wall',
+            2: 'coin',
+            3: 'cherry'
+        }
+        function genWorld() {
+            world.push([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]); // top wall
+
+            for (var i = 0; i < 20; i++) { //amount of rows
+                var arr = [];
+                for (var j = 0; j < world[0].length; j++) {
+                    var random = Math.floor((Math.random() * 4) + 1) - 1;
+                    arr.push(random);
+                }
+                world.push(arr);
+            }
+            for (var x = 0; x < world.length; x++) {
+                if (world[x][0] == world[x][0]) {
+                    world[x][0] = 1; //left side wall
+                }
+                if (world[x][19] == world[x][19]) {
+                    world[x][19] = 1; //right side wall
+                }
+            }
+            world.push([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]); //bottom wall
+        }
+        function drawWorld() {
+            out = '';
+            for (var row = 0; row < world.length; row++) {
+                out += "<div class = 'row'>"
+                for (var x = 0; x < world[row].length; x++) {
+                    out += "<div class = '" + worldDict[world[row][x]]
+                        + "'></div>"
+                }
+                out += "</div>"
+            }
+            document.getElementById('world').innerHTML = out;
+
+        }
+        genWorld();
+        drawWorld();
+
+        var pacman = {
+            x: 1,
+            y: 1
+        }
+        function drawPacman() {
+            document.getElementById('pacman').style.top = pacman.y * 40 + 'px'
+            document.getElementById('pacman').style.left = pacman.x * 40 + 'px'
+        }
+
+        document.onkeydown = function (e) {
+            //console.log(e.keyCode);
+            var img = document.getElementById('pacman');
+
+            if (e.keyCode == 37) {
+                pacman.x--
+                img.setAttribute('style', 'transform:rotate(180deg)');
+
+                if (world[pacman.y][pacman.x] == 1) {
+                    pacman.x++//right
+                }
+            }
+            if (e.keyCode == 39) {
+                pacman.x++
+                img.setAttribute('style', 'transform:rotate(0deg)');
+                
+                if (world[pacman.y][pacman.x] == 1) {
+                    pacman.x--//left
+                }
+            }
+            if (e.keyCode == 38) {
+                pacman.y--
+                img.setAttribute('style', 'transform:rotate(270deg)');
+                if (world[pacman.y][pacman.x] == 1) {
+                    pacman.y++//up
+                }
+            }
+            if (e.keyCode == 40) {
+                pacman.y++
+                img.setAttribute('style', 'transform:rotate(90deg)');
+
+                if (world[pacman.y][pacman.x] == 1) {
+                    pacman.y--//down
+                }
+            }
+            if (world[pacman.y][pacman.x] == 2) {
+                world[pacman.y][pacman.x] = 0;
+                score = score + 25;
+                console.log(score);
+                drawPacman();
+                drawWorld();
+            }
+            else if (world[pacman.y][pacman.x] == 3) {
+                world[pacman.y][pacman.x] = 0
+                score = score + 50;
+                console.log(score);
+                drawPacman();
+                drawWorld();
+            }
+            else if (world[pacman.y][pacman.x] == 0) {
+                world[pacman.y][pacman.x] = 0;
+                drawPacman(); //BLANK SPACE
+                drawWorld();
+            }
+
+        }
+    </script>
+</body>
+
+</html>

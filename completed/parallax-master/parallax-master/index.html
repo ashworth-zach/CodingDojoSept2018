@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Parralax attempt</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.min.js"></script>
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+                </svg>
+            </a>
+        </span>
+
+        <ul class="navbar-nav">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                parallax
+            </span>
+        </div>
+    </div>
+    <section class="section section-light">
+        <h2>section one</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, provident laudantium similique porro assumenda
+            hic nisi cum vitae esse iure asperiores laborum veritatis repellat quod cupiditate unde minus numquam iusto consequuntur,
+            quae architecto, velit voluptatibus! Unde tenetur quia numquam voluptatem eos praesentium temporibus dicta, ratione
+            nisi dolore culpa necessitatibus doloribus quas modi, error aspernatur. Optio earum autem accusantium aut! Adipisci
+            corporis nobis officia, magnam, obcaecati quas dolore modi, vel repudiandae consequatur exercitationem eligendi
+            minima aperiam. Illum sapiente, earum, facilis sunt beatae quis velit doloribus temporibus veritatis, accusamus
+            perferendis rerum. Omnis aut doloribus itaque sunt nobis accusantium possimus at distinctio porro.</p>
+
+    </section>
+    <div class="pimg2">
+        <div class="ptext">
+            <span class="trans">
+                Lorem ipsum dolor sit.
+            </span>
+        </div>
+    </div>
+    <section class="section section-dark">
+        <h2>section two</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, provident laudantium similique porro assumenda
+            hic nisi cum vitae esse iure asperiores laborum veritatis repellat quod cupiditate unde minus numquam iusto consequuntur,
+            quae architecto, velit voluptatibus! Unde tenetur quia numquam voluptatem eos praesentium temporibus dicta, ratione
+            nisi dolore culpa necessitatibus doloribus quas modi, error aspernatur. Optio earum autem accusantium aut! Adipisci
+            corporis nobis officia, magnam, obcaecati quas dolore modi, vel repudiandae consequatur exercitationem eligendi
+            minima aperiam. Illum sapiente, earum, facilis sunt beatae quis velit doloribus temporibus veritatis, accusamus
+            perferendis rerum. Omnis aut doloribus itaque sunt nobis accusantium possimus at distinctio porro.</p>
+
+    </section>
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="trans">
+                Lorem ipsum dolor sit.
+            </span>
+        </div>
+    </div>
+    <section class="section section-dark">
+        <h2>section three</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, provident laudantium similique porro assumenda
+            hic nisi cum vitae esse iure asperiores laborum veritatis repellat quod cupiditate unde minus numquam iusto consequuntur,
+            quae architecto, velit voluptatibus! Unde tenetur quia numquam voluptatem eos praesentium temporibus dicta, ratione
+            nisi dolore culpa necessitatibus doloribus quas modi, error aspernatur. Optio earum autem accusantium aut! Adipisci
+            corporis nobis officia, magnam, obcaecati quas dolore modi, vel repudiandae consequatur exercitationem eligendi
+            minima aperiam. Illum sapiente, earum, facilis sunt beatae quis velit doloribus temporibus veritatis, accusamus
+            perferendis rerum. Omnis aut doloribus itaque sunt nobis accusantium possimus at distinctio porro.</p>
+
+    </section>
+    <div class="pimg4">
+        <div class="ptext">
+            <span class="trans">
+                Lorem ipsum dolor sit.
+            </span>
+        </div>
+    </div>
+    <section class="section section-dark">
+        <h2>section four</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, provident laudantium similique porro assumenda
+            hic nisi cum vitae esse iure asperiores laborum veritatis repellat quod cupiditate unde minus numquam iusto consequuntur,
+            quae architecto, velit voluptatibus! Unde tenetur quia numquam voluptatem eos praesentium temporibus dicta, ratione
+            nisi dolore culpa necessitatibus doloribus quas modi, error aspernatur. Optio earum autem accusantium aut! Adipisci
+            corporis nobis officia, magnam, obcaecati quas dolore modi, vel repudiandae consequatur exercitationem eligendi
+            minima aperiam. Illum sapiente, earum, facilis sunt beatae quis velit doloribus temporibus veritatis, accusamus
+            perferendis rerum. Omnis aut doloribus itaque sunt nobis accusantium possimus at distinctio porro.</p>
+
+    </section>
+    <div class="pimg5">
+        <div class="ptext">
+            <span class="trans">
+                Lorem ipsum dolor sit.
+            </span>
+        </div>
+    </div>
+    <section class="section section-dark">
+        <h2>section five</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, provident laudantium similique porro assumenda
+            hic nisi cum vitae esse iure asperiores laborum veritatis repellat quod cupiditate unde minus numquam iusto consequuntur,
+            quae architecto, velit voluptatibus! Unde tenetur quia numquam voluptatem eos praesentium temporibus dicta, ratione
+            nisi dolore culpa necessitatibus doloribus quas modi, error aspernatur. Optio earum autem accusantium aut! Adipisci
+            corporis nobis officia, magnam, obcaecati quas dolore modi, vel repudiandae consequatur exercitationem eligendi
+            minima aperiam. Illum sapiente, earum, facilis sunt beatae quis velit doloribus temporibus veritatis, accusamus
+            perferendis rerum. Omnis aut doloribus itaque sunt nobis accusantium possimus at distinctio porro.</p>
+
+    </section>
+    <div class="pimg6">
+        <div class="ptext">
+            <span class="trans">
+                Lorem ipsum dolor sit.
+            </span>
+        </div>
+    </div>
+    <section class="section section-dark">
+        <h2>section six</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, temporibus. Nostrum rerum eveniet, reprehenderit vero
+            animi, laborum aspernatur nam ratione quia veniam beatae, numquam consectetur blanditiis magnam excepturi nesciunt
+            dolore sed ad quidem. Veritatis neque eius recusandae? Atque perferendis quaerat nulla dolore, odit iusto quae
+            sed accusantium consequatur delectus pariatur. Sequi fugiat totam autem dolores doloremque dolorum veritatis
+            beatae ipsam!</p>
+    </section>
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                parallax
+            </span>
+        </div>
+    </div>
+    <section class="section section-dark">
+        <h1>Made by Zach Ashworth</h1>
+        <p class="suckmyass">suck my ass</p>
+        
+    </section>
+    
+    <section class="section section-light">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa odio nihil incidunt ipsa sit blanditiis.</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum magni fuga cupiditate consequuntur non possimus illum
+            facere corrupti laboriosam recusandae voluptatibus alias, adipisci culpa inventore repellat quaerat deserunt
+            sit aliquam maxime tempore perspiciatis officia aperiam pariatur. Eveniet eum nam facilis, enim expedita illum
+            hic, sequi porro quibusdam, modi error ut.</p>
+    </section>
+    <section class="section section-dark">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, quae?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptate minima, ab error sunt vero a quo id dignissimos
+            voluptatem ea eligendi voluptatibus nobis enim?</p>
+        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur maiores odio, aspernatur sint facilis molestiae
+            nam perferendis. Deserunt, adipisci in?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, placeat?</p>
+
+</body>
+
+
+<script>
+    function openSlideMenu() {
+        document.getElementById('side-menu').style.width = '250px';
+        document.getElementById('main').style.marginLeft = '250px';
+    }
+
+    function closeSlideMenu() {
+        document.getElementById('side-menu').style.width = '0';
+        document.getElementById('main').style.marginLeft = '0';
+    }
+</script>
+
+</html>

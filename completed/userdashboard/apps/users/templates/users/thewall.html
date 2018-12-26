@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="jumbotron">Welcome to {{user.firstname}}'s wall</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">User Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/logout">logout <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">homepage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <ul class="messages">
+    {% if messages %}
+        {% for message in messages %}
+        <li {% if message.errors %} class="{{ message.errors }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form action="/new/newmessage/{{user.id}}" method="post" id="msgform">
+        {% csrf_token %}
+
+        <textarea type="text" name="messagecontent" cols='80' placeholder="leave a message" id="msgform"></textarea>
+        <input type="hidden" name="hidden" value="{{user.id}}">
+        <input type="hidden" name="hidden2" value="{{currentuser.id}}">
+
+        <input type="submit" value="submit">
+    </form>
+    {%for message in allmessages reversed%}
+    <div class='message'>
+        </p>{{message.user.firstname}}: {{message.content}} - <span class='bluespan'>{{message.created_at}}</span></p>
+        <ul>
+            {%for comment in message.comments.all %}
+            <li class='comment'>{{comment.ucomment.firstname}}: {{comment.content}} - <span>{{comment.created_at}}</span></li>
+            {%endfor%}
+            <form action="/new/newcomment" method="post" id='commentform'>
+                {% csrf_token %}
+                <input type="text" name="commentcontent" placeholder="leave a comment">
+                <input type="hidden" name="hidden" value="{{message.id}}">
+                <input type="hidden" name="hidden2" value="{{user.id}}">
+                <input type="hidden" name="hidden3" value="{{currentuser.id}}">
+                <input type="submit" value="submit">
+            </form>
+        </ul>
+    </div>
+    {%endfor%}
+    <a href="/dashboard">see all users</a>
+</body>
+
+</html>
