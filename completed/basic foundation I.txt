@@ -1,0 +1,70 @@
+var sum=0;
+var arr=[];
+var max=0;
+var avg=0;
+function onetotwofiftyfive(){
+  for (var i =1;i<256;i++){
+    arr.push(i);
+  }
+  return arr;
+}
+function returnEvenSum(){
+  for(var i =0;i<1001; i++){
+    if(i%2 == 0){
+      sum=sum+i;      
+    }
+  }
+  return sum;
+}
+function sumOddFiveK(){
+  for(var i =0;i<5001; i++){
+    if(i%2 != 0){
+      sum=sum+i;      
+    }
+  }
+  return sum;
+}
+function iterateArray(arr){
+  for(var i =0;i<arr.length;i++){
+    sum=sum+arr[i];
+    
+  }
+  return sum;
+}
+function findMax(arr){
+  for(var i =0;i<arr.length;i++){
+    if (arr[i]>max){
+      max=arr[i];
+    }
+  }
+      return max;
+}
+function findAvg(arr){
+  for(var i =0;i<arr.length;i++){
+    sum=sum+arr[i];
+  }
+  avg=sum/arr.length;
+  return avg;
+}
+function arrayOdd(){
+  for(var i=0;i<51;i++){
+    if (i%2 != 0){
+      arr.push(i);
+    }
+  }
+  return arr;
+}
+function greaterThanY(arr,y){
+  for (var i = 0; i < arr.length; i++){
+    if (arr[i]>y){
+      sum=sum+1;
+    }
+  }
+  return sum;
+}
+function squares(arr){
+  for (var i =0;i<arr.length;i++){
+    arr[i]=arr[i]*arr[i];
+  }
+  return arr;
+}

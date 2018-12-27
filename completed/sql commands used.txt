@@ -1,0 +1,17 @@
+Select * from tweets where user_id=1;
+
+update tweets
+
+set tweet = "figgggggnewton"
+where id=1;
+
+insert into tweets(tweet,id,created_at,updated_at)
+values ("this is my tweeet hello hello",1,now(),now());
+
+SET SQL_SAFE_UPDATES = 0;
+
+
+delete from users 
+where id=1;
+
+//had to change foreign keys setting to cascade on delete

@@ -1,0 +1,44 @@
+var arr=[];
+var newarr=[];
+var temp=0;
+function resetNegatives(arr){
+  for(var i =0;i<arr.length;i++){
+    if(arr[i]<0){
+      arr[i]=0;
+    }
+
+  }
+      return arr;
+}
+function moveForward(arr){
+  for(var i=0;i<arr.length;i++){
+    if(i+1>arr.length-1){
+      arr[i]=0;
+      return arr;
+    }
+    else{
+    arr[i]=arr[i+1];
+    }
+  }
+}
+function reverseOrder(arr){
+  for(var i =0;i<arr.length/2;i++){
+    temp=arr[i];
+    arr[i]=arr[arr.length-i-1];
+    arr[arr.length-i-1]=temp;
+  }
+  return arr;
+}
+function repeatTwice(arr){
+  var pointer = arr.length-1
+  arr.length=arr.length*2;
+  for(var i =arr.length-1; i>0;i= i-2){
+    arr[i]= arr[pointer];
+    arr[i-1]=arr[pointer];
+    pointer -=1;
+  }
+  return arr;
+}
+
+
+

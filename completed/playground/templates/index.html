@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}" />>
+</head>
+
+<body>
+    <h3>My flask template with embedded Python-like code</h3>
+    <!-- this will output the value of our phrase variable -->
+    <!-- this will output the value of our times variable -->
+    <p>Times: {{ times }}</p>
+    <!-- here is an example of embedding a for-loop in our code -->
+    {% for x in range(0,times): %}
+    <div class="box" style="background-color: {{color}};"></div>
+    {% endfor %}
+    <!-- here is an example of embedding an if statement in our code -->
+  </body>
+</html>

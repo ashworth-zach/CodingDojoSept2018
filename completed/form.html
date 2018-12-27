@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <form action="process.php" method="post">
+        <p>MY REGISTRATION FORM</p>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name">
+        <br>
+        <br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name">
+        <br>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <br>
+        <br>
+
+        <p>Select your gender:</p>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male">
+
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female">
+
+        <label for="decline">Other</label>
+        <input type="radio" id="decline" name="gender" value="decline">
+        <br>
+        <br>
+
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday" value="date">
+
+        <p>Say a few words about yourself:</p>
+        <textarea name="description"></textarea>
+        <br>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <br>
+
+        <label for="pw_confirm">Password Confirmation:</label>
+        <input type="password" id="pw_confirm" name="password_confirmation">
+        <br>
+        <br>
+        <label for="programminglanguages">favorite language: </label>
+        <select name="programminglanguages">
+            <option value="css">css</option>
+            <option value="javascript">javascript</option>
+            <option value="python">python</option>
+            <option value="html">html</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit">
+        <input type="submit" value="Click here to register">
+    </form>
+</head>
+
+</html>

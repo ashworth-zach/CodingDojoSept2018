@@ -1,0 +1,44 @@
+.header{
+    background-color:rgb(100, 100, 100);
+}
+.body{
+    background-color: grey;
+}
+@media only screen and (max-width: 480px) {
+    .phone{
+        background-color: yellow;
+    }
+    .tablet{
+        display: none;
+
+    }
+    .desktop{
+        display: none;
+    }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media only screen and (min-width: 481px) {
+    .phone{
+        display: none;
+    }
+    .tablet{
+        background-color: yellow;
+    }
+    .desktop{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .phone{
+        display: none;
+    }
+    .tablet{
+        display: none;
+    }
+    .desktop{
+        background-color: yellow;
+        display: inline;
+    }
+}

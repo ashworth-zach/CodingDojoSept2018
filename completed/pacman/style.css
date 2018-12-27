@@ -1,0 +1,46 @@
+*{  margin: 0;
+    padding: 0;
+ }
+ .row{
+     line-height: 0px;
+ }
+.wall{
+    background-color:blue;
+    height : 40px;
+    width: 40px;
+    display: inline-block;
+}
+.coin {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-image: url('images/Spinningcoin--1q4q6x1q9s4t6y9p50.gif');
+    background-size: contain;
+}
+.cherry {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-image: url('images/cherry.png');
+    background-size: contain;
+}
+.blank {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+#pacman {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-image: url('images/pac.gif');
+    background-size: contain;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}

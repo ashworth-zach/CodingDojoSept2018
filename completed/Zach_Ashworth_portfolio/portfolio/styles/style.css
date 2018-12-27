@@ -1,0 +1,143 @@
+.wrapper {
+    background-color: purple;
+    width: 900px;
+    
+}
+#content_div{
+    display:inline-block;
+    height: 490px;
+    width: 30%;
+    background-color: grey;
+    vertical-align:top;
+    margin: 15px 0 15px 20px;
+}
+
+.top {
+    background-color: grey;
+    display: block;
+    color: black;
+    padding: 10px 0px 10px 0px;
+}
+
+.topleft {
+    display: inline-block;
+    color: white;
+    font-size: 16pt;
+}
+
+.topright {
+    display:inline-block;
+    vertical-align: top;
+    margin-left: 500px;
+    font-size: 16pt;
+    color: white;
+}
+
+.headshot {
+    width: 35%;
+    margin: 15px;
+    border: 5px;
+    border-style: solid;
+    border-color: white;
+}
+
+.about {
+    width: 55%;
+    height: 300px;
+    background-color: white;
+    display:inline-block;
+    vertical-align: top;
+    margin-top:15px;
+    margin-left: 15px;
+}
+
+.aboutheader {
+    display: block;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(184deg, rgba(2, 0, 36, 1) 0%, rgba(81, 80, 110, 1) 0%, rgba(235, 235, 255, 1) 100%);
+    color: white;
+    padding: 10px 0px 10px 0px
+}
+
+.lamodeheader {
+    display: block;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(184deg, rgba(2, 0, 36, 1) 0%, rgba(81, 80, 110, 1) 0%, rgba(235, 235, 255, 1) 100%);
+    color: white;
+    padding: 10px 0px 10px 0px
+}
+
+.lamodepic {
+    width: 100%;
+}
+
+.codinglogo {
+    height: 25px;
+    width: 25px;
+}
+
+.tech1 {
+    display: block;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(184deg, rgba(2, 0, 36, 1) 0%, rgba(81, 80, 110, 1) 0%, rgba(235, 235, 255, 1) 100%);
+    padding: 10px 0px 10px 0px;
+    width: 100%
+}
+
+.tech2 {
+    display: block;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(184deg, rgba(2, 0, 36, 1) 0%, rgba(81, 80, 110, 1) 0%, rgba(235, 235, 255, 1) 100%);
+    padding: 10px 0px 10px 0px;
+    width: 100%
+}
+
+.tech3 {
+    display: block;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(184deg, rgba(2, 0, 36, 1) 0%, rgba(81, 80, 110, 1) 0%, rgba(235, 235, 255, 1) 100%);
+    padding: 10px 0px 10px 0px;
+    width: 100%
+}
+
+.familyheader {
+    display: block;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(184deg, rgba(2, 0, 36, 1) 0%, rgba(81, 80, 110, 1) 0%, rgba(235, 235, 255, 1) 100%);
+    color: white;
+    padding: 10px 0px 10px 0px
+}
+
+.familypic {
+    width: 100%;
+}
+.fivepic{
+    width:100%;
+}
+.fiveheader{
+    display: block;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(184deg, rgba(2, 0, 36, 1) 0%, rgba(81, 80, 110, 1) 0%, rgba(235, 235, 255, 1) 100%);
+    color: white;
+    padding: 10px 0px 10px 0px
+}
+.button{
+    margin-left: 90px;
+    margin-top: 10px;
+    background-color: rgb(31, 141, 35);
+    color: white;
+}
+p{
+    font-size: 11pt;
+}
+.footer{
+    display:block;
+    background-color: white;
+    padding: 10px 0px 10px 0px
+}
+.email{
+    text-align: center;
+}
+.social{
+    text-align: center;
+}

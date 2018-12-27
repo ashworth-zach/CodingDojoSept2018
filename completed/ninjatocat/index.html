@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <img src='./img/ninja0.png' data-alt-src='./img/cat0.png' class="pic zero" />
+    <img src='./img/ninja1.png' data-alt-src='./img/cat1.png' class="pic one" />
+    <img src='./img/ninja2.png' data-alt-src='./img/cat2.png' class="pic two" />
+    <img src='./img/ninja3.png' data-alt-src='./img/cat3.png' class="pic three" />
+    <img src='./img/ninja4.png' data-alt-src='./img/cat4.png' class="pic four" />    
+</body>
+<script>
+$(document).ready(function(){
+  var flag = 0;  
+  $(".zero").click(function(){
+    if(flag == 0) {
+      $(".zero").attr("src","./img/cat0.png");
+      flag = 1;
+    }
+    else if(flag == 1) {
+      $(".zero").attr("src","./img/ninja0.png");
+      flag = 0;
+    }
+  });
+  $(".one").click(function(){
+    if(flag == 0) {
+      $(".one").attr("src","./img/cat1.png");
+      flag = 1;
+    }
+    else if(flag == 1) {
+      $(".one").attr("src","./img/ninja1.png");
+      flag = 0;
+    }
+  });
+  $(".two").click(function(){
+    if(flag == 0) {
+      $(".two").attr("src","./img/cat2.png");
+      flag = 1;
+    }
+    else if(flag == 1) {
+      $(".two").attr("src","./img/ninja2.png");
+      flag = 0;
+    }
+  });
+  $(".three").click(function(){
+    if(flag == 0) {
+      $(".three").attr("src","./img/cat3.png");
+      flag = 1;
+    }
+    else if(flag == 1) {
+      $(".three").attr("src","./img/ninja3.png");
+      flag = 0;
+    }
+  });
+  $(".four").click(function(){
+    if(flag == 0) {
+      $(".four").attr("src","./img/cat4.png");
+      flag = 1;
+    }
+    else if(flag == 1) {
+      $(".four").attr("src","./img/ninja4.png");
+      flag = 0;
+    }
+  });
+
+});
+</script>
+</html>
