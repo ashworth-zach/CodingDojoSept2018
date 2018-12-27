@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ninja_gold/css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>ninja gold</title>
+</head>
+
+<body>
+    <div class="jumbotron text-center bg-dark">
+        <h1>NINJA GOLD</h1>
+        <h3>total gold: {{request.session.gold}}</h3>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h1>farm</h1>
+                <p>(earns 10-20 gold)</p>
+                <form action="/ninjagold/process_money" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="hidden" value="farm" />
+                    <input class='btn' type="submit" value="search farm for gold" />
+                </form>
+            </div>
+            <div class="col-sm-3">
+                <h1>cave</h1>
+                <p>(earns 5-10 gold)</p>
+                <form action="/ninjagold/process_money" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="hidden" value="cave" />
+                    <input class='btn' type="submit" value="search cave for gold" />
+                </form>
+            </div>
+            <div class="col-sm-3">
+                <h1>house</h1>
+                <p>(earns 2-5 gold)</p>
+                <form action="/ninjagold/process_money" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="hidden" value="house" />
+                    <input class='btn' type="submit" value="search house for gold" />
+                </form>
+            </div>
+            <div class="col-sm-3">
+                <h1>casino</h1>
+                <p>(earns/takes 0-50 gold)</p>
+                <form action="/ninjagold/process_money" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="hidden" value="casino" />
+                    <input class='btn' type="submit" value="Go To Casino!" />
+                </form>
+            </div>
+            <div class="scrollbox">
+                {%for instance in request.session.activity%}
+                {{instance|safe}}
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</body>
+<script>
+    $(".scrollbox").scrollTop(10000000000000000);
+</script>
+
+</html>

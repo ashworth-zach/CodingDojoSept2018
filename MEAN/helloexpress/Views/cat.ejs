@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>cat data</h2>
+    <%if(cat[0].num==1){%>
+    <img src="/images/cat.jpg">
+    <%}%>
+    <%if(cat[0].num==2){%>
+        <img src="/images/cat1.jpg">
+        <%}%>
+        <%if(cat[0].num==3){%>
+            <img src="/images/cat2.jpg">
+            <%}%>
+    <h3>Name:
+        <%= cat[0].name %>
+    </h3>
+    <h4>favorite food:
+        <%= cat[0].food %>
+    </h4>
+    <h4>sleeping spots:
+        <%for(var i = 0; i < cat[0].spots.length;i++){%>
+            <%= cat[0].spots[i] %>,
+        <%}%>
+
+    </h4>
+    <hr>
+</body>
+
+</html>

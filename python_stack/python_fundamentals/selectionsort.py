@@ -1,11 +1,10 @@
+arr = [64, 25, 12, 22, 11] 
 def selectionsort(arr):
-    newarr=[]
-    min=arr[0]
-    loop=0
-    for loop in range(loop,len(arr)):
-        if min > arr[loop]:
-            arr[loop], min = min, arr[loop]
-        print(min,arr[loop])
-selectionsort([5,4,3,2,1])
-
-            
+    for i in range(len(arr)): 
+        min = i 
+        for j in range(i+1, len(arr)): 
+            if arr[min] > arr[j]: 
+                min = j 
+        arr[i], arr[min] = arr[min], arr[i] 
+    print (arr) 
+selectionsort([5,4,3,2,5,4,3,7,8,2])

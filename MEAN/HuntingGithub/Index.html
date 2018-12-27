@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>github hunting</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="displaybox">place holder for github name</h1>
+    <script>
+        $.get("https://api.github.com/users/ashworth-zach", displayName)
+        // Notice that displayName is a function that takes in 1 parameter (this is the data that comes back from the API)
+        function displayName(data) {
+            console.log(data["name"]);
+            $( ".displaybox" ).html( data["name"] )
+        }
+    </script>
+    <h1 class="displaybox2">first 45 github users:</h1>
+    <script>
+            $.get("https://api.github.com/users", displayName)
+            // Notice that displayName is a function that takes in 1 parameter (this is the data that comes back from the API)
+            function displayName(data) {
+                console.log(data);
+                for(var i = 0;i < data.length; i++){
+                    console.log(data[i]["id"] + " - "+ data[i]["login"]);
+                    $( ".displaybox2" ).append("<br>"+data[i]["id"] + " - "+ data[i]["login"])
+                }
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+.btn:hover {
+    background-color: rgb(21, 255, 0);
+    color: black;
+}
+.scrollbox {
+    height: 300px;
+    width: 80%;
+    overflow: auto;
+    border: 3px solid darkgray;
+    padding: 2%;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.jumbotron {
+    color: white;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(0, 212, 255, 1) 100%);
+}
+
+.activitylist {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.redtext {
+    color: red;
+}
+
+.greentext {
+    color: green;
+}
